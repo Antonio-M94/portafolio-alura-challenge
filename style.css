@@ -4,27 +4,66 @@ en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+:root {
+  /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  /* Colors */
+  --black: #464646;
+  --blue: #2a7ae4;
+  --blue-primary-hover-desktop: #5595e9;
+  --blue-secondary-hover-desktop: #d4e4fa;
+  --cor-de-fundo: #f5f5f5;
+  --cor-de-link: #000;
+  --ligth-blue: #eaf2fd;
+  --white: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: 'Raleway';
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
-ol, ul,li {
-    list-style: none;
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-    color: var(--cor-de-link);
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--cor-de-link);
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -39,94 +78,149 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+.tudo {
+  width: 90%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
 /*Sección Menu*/
 
-section.menu{
+section.menu {
+  padding: 3.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+}
+.menu nav {
+  display: flex;
+  align-items: center;
+}
 
+.menu__list {
+  display: flex;
+  list-style: none;
+}
+.menu__list__item {
+  color: var(--black);
+  font-size: 1.6rem;
+  margin-right: 3rem;
+}
+.menu__list__item:last-child {
+  font-weight: bold;
+}
+.menu__list__item a {
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.8s ease;
+}
+
+.menu__list__item a:hover {
+  padding: 6px;
+  background-color: #60d9dd69;
+  border-radius: 15px;
+}
+
+.menu__list__item__contato {
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: none;
 }
 
 /*Sección Title*/
 
-section.title{
-
+section.title {
 }
 
 /*Sección About*/
 
-section.about{
-
+section.about {
 }
 
 /*Sección Hobbies*/
 
-section.hobbies{
-    
+section.hobbies {
 }
 
 /* Experiencia Académica*/
 
-section.academic{
-
+section.academic {
 }
 
 /* experiencia*/
 
-section.experience{
-
+section.experience {
 }
 
 /*Contacto*/
 
-section.formcontato{
-
+section.formcontato {
 }
 
 /*footeer*/
 
-section.footer{
-   
+section.footer {
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
+/* Desktop */
+@media screen and (max-width: 1440px) {
+  .menu__list__item {
+    font-size: 1.4rem;
+    margin-right: 1.4rem;
+  }
 
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+  .menu__list__item__contato {
+    font-size: 1.5rem;
+  }
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+/* Table */
+@media screen and (max-width: 768px) {
+  .tudo {
+    width: 92%;
+    max-width: 144rem;
+    margin: 0 auto;
+  }
 
-/*Menu*/
+  .menu__list {
+    display: none;
+  }
 
-/*Titulo*/
+  .menu__list__item__contato {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
 
-/*Sección sobre mi*/
+/* Mobile */
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-/*Skills*/
+  .tudo {
+    width: 98%;
+  }
+  .menu {
+    padding: 1.6rem;
+  }
 
-/*Hobbies*/
- 
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
- /*Contacto*/
-
-/*Footer*/
-
+  .menu__list__item__contato {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 }
