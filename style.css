@@ -91,6 +91,7 @@ section.menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--black);
 }
 .menu__header {
   display: flex;
@@ -108,7 +109,6 @@ section.menu {
   list-style: none;
 }
 .menu__list__item {
-  color: var(--black);
   font-size: 1.6rem;
   margin-right: 3rem;
 }
@@ -116,9 +116,8 @@ section.menu {
   font-weight: bold;
 }
 .menu__list__item a {
-  color: var(--black);
   text-decoration: none;
-  transition: all 0.8s ease;
+  transition: all 0.6s ease;
 }
 
 .menu__list__item a:hover {
@@ -128,7 +127,6 @@ section.menu {
 }
 
 .menu__list__item__contato {
-  color: var(--black);
   font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
@@ -137,7 +135,51 @@ section.menu {
 
 /*Sección Title*/
 
-section.title {
+.title__div {
+  padding: 3.2rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4.4rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--black);
+}
+.title__profile {
+  border-radius: 50%;
+  width: 37rem;
+  height: 37rem;
+}
+
+.title__bio {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.title__subsection {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.title__network {
+  padding: 1.5rem 0;
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.title__network__item a {
+  color: var(--black);
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+.title__network__item a:hover {
+  padding: 6px;
+  background-color: #60d9dd69;
+  border-radius: 15px;
 }
 
 /*Sección About*/
@@ -174,12 +216,19 @@ section.footer {
 Utiliza las referencias de los breakpoints @media abajo */
 /* Desktop */
 @media screen and (max-width: 1440px) {
+  .menu__header {
+    font-size: 1.4rem;
+  }
   .menu__list__item {
     font-size: 1.4rem;
     margin-right: 1.4rem;
   }
 
   .menu__list__item__contato {
+    font-size: 1.5rem;
+  }
+
+  .title__network__item a {
     font-size: 1.5rem;
   }
 }
@@ -195,20 +244,84 @@ Utiliza las referencias de los breakpoints @media abajo */
   .menu__list {
     display: none;
   }
+  .menu__header {
+    font-size: 1.6rem;
+  }
 
   .menu__list__item__contato {
     display: block;
     font-size: 1.6rem;
   }
+
+  .title__container {
+    width: 60%;
+  }
+  .title__profile {
+    border-radius: 50%;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .title__bio {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .title__subsection {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .menu__list__item {
+    gap: 1rem;
+  }
+  .title__network__item a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 88.3rem) {
+  .title__profile {
+    width: 20rem;
+    height: 20rem;
+  }
+  .title__network__item a {
+    margin-right: none;
+  }
 }
 
 /* Mobile */
+
+@media screen and (max-width: 563px) {
+  h3 {
+    font-size: 1.4rem;
+  }
+  .menu__list__item__contato {
+    font-weight: 100;
+    font-size: 1.4rem;
+  }
+  .title__container {
+    width: 100%;
+  }
+  .title__div {
+    flex-direction: column;
+    align-items: flex-start;
+    display: block;
+  }
+  .title__network__item {
+    justify-content: space-between;
+    font-weight: 400;
+  }
+  .title__network {
+    gap: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 425px) {
   h2 {
     font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 1.2rem;
   }
 
   .tudo {
@@ -217,10 +330,39 @@ Utiliza las referencias de los breakpoints @media abajo */
   .menu {
     padding: 1.6rem;
   }
+  .menu__header {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
 
   .menu__list__item__contato {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .title__container {
+    padding: 1.6rem;
+    width: 100%;
+  }
+
+  .title__profile {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .title__bio {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .title__network {
+    gap: 1.4rem;
+  }
+  .title__network__item a {
+    font-size: 1.4rem;
     font-weight: 400;
+  }
+  .title__network__item img {
+    width: 0.9rem;
   }
 }
