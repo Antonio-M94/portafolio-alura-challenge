@@ -195,7 +195,7 @@ section.about {
   color: var(--black);
 }
 .about__title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   line-height: 2.5rem;
   margin-bottom: 16px;
 }
@@ -221,7 +221,7 @@ section.skills {
   color: var(--black);
 }
 .skills__title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   text-align: center;
   margin-top: 4.2rem;
   margin-bottom: 3rem;
@@ -246,7 +246,7 @@ section.skills {
 .skills__img i,
 .hobbies__box i {
   color: var(--blue);
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 .skills__line ul,
 .hobbies__line ul {
@@ -268,15 +268,51 @@ section.hobbies {
   color: var(--black);
 }
 .hobbies__title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   text-align: center;
   margin-top: 4.2rem;
   margin-bottom: 3rem;
 }
-
 /* Experiencia Académica*/
 
 section.academic {
+  padding: 6.2rem 0;
+  background-color: var(--ligth-blue);
+  color: var(--black);
+  margin-top: 4.2rem;
+}
+.academic__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.academic__courses {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 144rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  flex-grow: 1;
+}
+
+.academic__courses__list {
+  padding: 0;
+}
+.academic__courses__item__img {
+  background-color: var(--white);
+  padding: 8rem;
+  text-align: center;
+}
+
+.academic__courses__item__title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.academic__courses__item__subtitle {
+  font-size: 1.6rem;
 }
 
 /* experiencia*/
@@ -377,6 +413,17 @@ Utiliza las referencias de los breakpoints @media abajo */
   .hobbies__title {
     font-size: 1.8rem;
   }
+
+  .academic__courses__item__img {
+    padding: 4rem 6.2rem;
+  }
+  .academic__courses__item__title {
+    font-size: 1.6rem;
+  }
+
+  .academic__courses__item__subtitle {
+    font-size: 1.4rem;
+  }
 }
 
 @media screen and (max-width: 88.3rem) {
@@ -416,6 +463,13 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
   .skills__box {
     grid-template-columns: repeat(auto-fit, minmax(15.6rem, 1fr));
+  }
+  .academic__courses {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(22.3rem, 1fr));
   }
 }
 
@@ -468,5 +522,13 @@ Utiliza las referencias de los breakpoints @media abajo */
   .skills__line,
   .hobbies__line {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .academic__courses {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(22.3rem, 1fr));
   }
 }
