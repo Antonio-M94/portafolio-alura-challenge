@@ -318,8 +318,94 @@ section.academic {
 /* experiencia*/
 
 section.experience {
+  background-color: var(--cor-de-fundo);
+  color: var(--black);
+  padding: 6.2rem 0;
+  margin-bottom: 3rem;
+  width: 90%;
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
+.experience__section__title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience__box {
+  margin: 2rem 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.experience__box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.experience__img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 59%;
+}
+
+.experience__info,
+.experience__info-container {
+  min-width: 39%;
+  min-height: 40.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience__title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.experience__text {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  font-weight: 100;
+}
+
+.experiencia__botao--repo {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  display: inline-block;
+  padding: 16px;
+  size: 1.6rem;
+  width: 11.6rem;
+  height: 5.1rem;
+  text-align: center;
+}
+
+.experiencia__botao--repo:hover {
+  color: var(--white);
+  background-color: var(--blue-primary-hover-desktop);
+  cursor: pointer;
+}
+
+.experience__botao--demo {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+  display: inline-block;
+  padding: 16px;
+  size: 1.6rem;
+  width: 11.6rem;
+  height: 5.1rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+.experience__botao--demo:hover {
+  color: var(--blue);
+  background-color: var(--blue-secondary-hover-desktop);
+  cursor: pointer;
+}
 /*Contacto*/
 
 section.formcontato {
@@ -424,6 +510,36 @@ Utiliza las referencias de los breakpoints @media abajo */
   .academic__courses__item__subtitle {
     font-size: 1.4rem;
   }
+
+  .experience__box {
+    display: unset;
+  }
+
+  .experience__box:nth-child(event) {
+    flex-direction: row;
+  }
+  .experience__img {
+    width: 100%;
+    min-height: 31.6rem;
+  }
+
+  .experience__info,
+  .experience__info-container {
+    display: unset;
+  }
+
+  .experience__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .experience__text {
+    font-size: 1.4rem;
+  }
+
+  .experiencia__botao--repo {
+    margin-bottom: 4rem;
+  }
 }
 
 @media screen and (max-width: 88.3rem) {
@@ -470,6 +586,10 @@ Utiliza las referencias de los breakpoints @media abajo */
     grid-auto-flow: dense;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(22.3rem, 1fr));
+  }
+  .experience__img {
+    width: 100%;
+    min-height: 24rem;
   }
 }
 
@@ -530,5 +650,17 @@ Utiliza las referencias de los breakpoints @media abajo */
     grid-auto-flow: dense;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(22.3rem, 1fr));
+  }
+  .experience__img {
+    width: 100%;
+    min-height: 20rem;
+  }
+
+  .experience__title {
+    font-size: 1.6rem;
+  }
+
+  .experience__text {
+    font-size: 1.4rem;
   }
 }
