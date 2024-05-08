@@ -56,7 +56,7 @@
                                 <img src="assets\arrow.png"></a></li>
                         <li class="title__network__item"><a href="" target="_blank" rel="noopener noreferrer">Instagram
                                 <img src="assets\arrow.png"></a></li>
-                        <li class="title__network__item"><a href="files/CV.pdf" target="_blank"
+                        <li class="title__network__item"><a href="/files/CV.pdf" target="_blank"
                                 rel="noopener noreferrer">Currículo
                                 <img src="assets\arrow.png"></a></li>
                     </ul>
@@ -262,10 +262,10 @@
 
             <div class="experience__box">
                 <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
-                <img class="experience__img" src="assets/weather_app.png">
+                <img class="experience__img" src="/assets/weather_app.png">
                 <div class="experience__info-container">
                     <h2 class="experience__title">Weather APP</h2>
-                    <h3 class="experience__text">Aplicación de Clima con HTML, CSS, JS y consumo de API de clima </h3>
+                    <h3 class="experience__text">Aplicación de Clima con HTML, CSS, JS </h3>
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
                         <span class="experience__repo"><a href="https://github.com/Antonio-M94/weather-app-basic"
@@ -276,24 +276,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="experience__box">
-                <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
-                <img class="experience__img" src="assets/todo-list.png">
-                <div class="experience__info-container">
-                    <h2 class="experience__title">TODO LIST APP</h2>
-                    <h3 class="experience__text">Aplicación de tareas con HTML, CSS, JS y uso de local storage </h3>
-                    <div class="experience__description">
-                        <!-- Pon el enlace del proyecto en Github o GithubPages -->
-                        <span class="experience__repo"><a href="https://github.com/Antonio-M94/todo-list-app-basic"
-                                target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                        <span class="experience__demo"><a href="https://antonio-m94.github.io/todo-list-app-basic/"
-                                target="_blank" rel="noopener noreferrer"><button class="experience__botao--demo">Ver
-                                    demo</button></a></span>
-                    </div>
-                </div>
-            </div>
         </section>
+
         <!-- Sección de Contacto -->
         <section class="formcontato" id="contacto">
             <div class="formcontato__contacto">
@@ -302,15 +286,33 @@
                 </div>
                 <div class="formcontato__text">
                     <h2 class="formcontato__title">Contacto</h2>
-                    <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
-                    <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con
-                        usted lo antes posible. </h3>
+                    <div>
+                        <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
+                        <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con
+                            usted lo antes posible. </h3>
+                    </div>
                     <form class="formcontato__form" name="form">
-                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
-                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
-                        <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje"
-                            placeholder="Mensaje"></textarea>
+                        <div>
+                            <label for="name" class="formcontacto__label">Nombre</label>
+                            <input id="name" class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="formcontacto__label">E-mail</label>
+                            <input id="email" class="formcontato__input" type="email" name="email" placeholder="E-mail">
+                        </div>
+
+                        <div>
+                            <label for="asunto" class="formcontacto__label">Asunto</label>
+                            <input id="asunto" class="formcontato__input" type="text" name="asunto"
+                                placeholder="Asunto">
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="formcontacto__label">Mensaje</label>
+                            <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje"
+                                placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="formcontacto__formulario_warning"></div>
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
                     </form>
                 </div>
@@ -320,8 +322,8 @@
         <!-- Sección de Footer -->
         <section class="footer">
             <div class="footer__rodape">
-                <p>Desarrollado por Fulana de Tal</p>
-                <p>2022</p>
+                <p>Desarrollado por Isidro Mondragón</p>
+                <p>2024</p>
             </div>
         </section>
     </div>
