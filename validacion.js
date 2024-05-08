@@ -9,7 +9,7 @@ inputs.forEach((input) => {
   const label = document.querySelector(`label[for="${input.id}"]`);
   input.addEventListener('input', function () {
     if (input.value === '') {
-      label.style.color = '#464646';
+      label.style.color = '#fff';
     } else {
       label.style.color = '#2a7ae4';
     }
@@ -21,7 +21,7 @@ textareas.forEach((textarea) => {
   const label = document.querySelector(`label[for="${textarea.id}"]`);
   textarea.addEventListener('input', function () {
     if (textarea.value === '') {
-      label.style.color = '#464646';
+      label.style.color = '#fff';
     } else {
       label.style.color = '#2a7ae4';
     }

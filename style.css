@@ -429,7 +429,7 @@ section.formcontato {
 }
 
 .formcontato__text {
-  flex: 1.5;
+  flex: 1.4;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -471,6 +471,8 @@ section.formcontato {
   padding-top: 1rem;
   width: 100%;
   font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
 }
 
 .formcontacto__label:active {
@@ -487,6 +489,7 @@ section.formcontato {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
+  color: var(--black);
 }
 
 .formcontato__input:focus,
