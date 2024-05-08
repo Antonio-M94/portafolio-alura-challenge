@@ -1,4 +1,4 @@
-/* Cambiar el color de los inputs y textarea */
+// Cambiar el color de los inputs y textarea
 const inputs = document.querySelectorAll('input');
 const textareas = document.querySelectorAll('textarea');
 
@@ -16,9 +16,10 @@ textareas.forEach((textarea) => {
   });
 });
 
-/* Validación del formulario de contacto */
+// Validación del formulario de contacto
 const form = document.querySelector('.formcontato__form');
 const nombreInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
 const warningMensaje = document.querySelector(
   '.formcontacto__formulario_warning'
 );
@@ -32,6 +33,10 @@ form.addEventListener('submit', function (event) {
   } else if (nombreInput.value.length > 50) {
     warningMensaje.textContent = 'El nombre debe tener máximo 50 caracteres.';
     nombreInput.focus();
+  } else if (!validateEmail(emailInput.value.trim())) {
+    warningMensaje.textContent =
+      'Por favor, ingresa un correo electrónico válido.';
+    emailInput.focus();
   } else {
     form.submit();
   }
@@ -41,3 +46,9 @@ form.addEventListener('submit', function (event) {
 nombreInput.addEventListener('input', function () {
   warningMensaje.textContent = '';
 });
+
+// Función para validar el formato del correo electrónico
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
