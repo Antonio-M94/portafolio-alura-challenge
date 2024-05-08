@@ -21,6 +21,7 @@ const form = document.querySelector('.formcontato__form');
 const nombreInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const asuntoInput = document.getElementById('asunto');
+const mensajeTextarea = document.getElementById('mensaje');
 const warningMensaje = document.querySelector(
   '.formcontacto__formulario_warning'
 );
@@ -44,6 +45,12 @@ form.addEventListener('submit', function (event) {
   } else if (asuntoInput.value.length > 50) {
     warningMensaje.textContent = 'El asunto debe tener máximo 50 caracteres.';
     asuntoInput.focus();
+  } else if (mensajeTextarea.value.trim() === '') {
+    warningMensaje.textContent = 'Por favor, ingresa un mensaje.';
+    mensajeTextarea.focus();
+  } else if (mensajeTextarea.value.length > 300) {
+    warningMensaje.textContent = 'El mensaje debe tener máximo 300 caracteres.';
+    mensajeTextarea.focus();
   } else {
     form.submit();
   }
