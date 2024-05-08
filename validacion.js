@@ -20,6 +20,7 @@ textareas.forEach((textarea) => {
 const form = document.querySelector('.formcontato__form');
 const nombreInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
+const asuntoInput = document.getElementById('asunto');
 const warningMensaje = document.querySelector(
   '.formcontacto__formulario_warning'
 );
@@ -37,6 +38,12 @@ form.addEventListener('submit', function (event) {
     warningMensaje.textContent =
       'Por favor, ingresa un correo electrónico válido.';
     emailInput.focus();
+  } else if (asuntoInput.value.trim() === '') {
+    warningMensaje.textContent = 'Por favor, ingresa un asunto.';
+    asuntoInput.focus();
+  } else if (asuntoInput.value.length > 50) {
+    warningMensaje.textContent = 'El asunto debe tener máximo 50 caracteres.';
+    asuntoInput.focus();
   } else {
     form.submit();
   }
