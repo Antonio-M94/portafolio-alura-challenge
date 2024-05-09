@@ -35,6 +35,9 @@ form.addEventListener('submit', function (event) {
   } else if (nombreInput.value.length > 50) {
     warningMensaje.textContent = 'El nombre debe tener máximo 50 caracteres.';
     nombreInput.focus();
+  } else if (emailInput.value.trim() === '') {
+    warningMensaje.textContent = 'Por favor, ingresa tu correo electrónico.';
+    emailInput.focus();
   } else if (!validateEmail(emailInput.value.trim())) {
     warningMensaje.textContent =
       'Por favor, ingresa un correo electrónico válido.';
@@ -56,13 +59,17 @@ form.addEventListener('submit', function (event) {
   }
 });
 
-// Agrega un event listener al campo de nombre para borrar el mensaje de error cuando se empiece a escribir en él
-nombreInput.addEventListener('input', function () {
-  warningMensaje.textContent = '';
-});
+// Agrega un event listener al campo de nombre y correo electrónico para borrar el mensaje de error cuando se empiece a escribir en ellos
+nombreInput.addEventListener('input', clearWarningMessage);
+emailInput.addEventListener('input', clearWarningMessage);
 
 // Función para validar el formato del correo electrónico
 function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
+}
+
+// Función para borrar el mensaje de advertencia
+function clearWarningMessage() {
+  warningMensaje.textContent = '';
 }
