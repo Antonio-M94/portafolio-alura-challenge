@@ -516,7 +516,25 @@ section.formcontato {
   cursor: pointer;
   background-color: var(--blue-primary-hover-desktop);
 }
-
+/* Scroll icon */
+.scroll-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #515e6e85;
+  padding: 2rem 2.1rem;
+  position: fixed;
+  right: 2.5rem;
+  border-radius: 50%;
+  z-index: 999;
+  bottom: 2.5rem;
+  border: none;
+  cursor: pointer;
+}
+.scroll-icon i {
+  font-size: 2rem;
+  color: var(--white);
+}
 /*footeer*/
 
 section.footer {
@@ -545,6 +563,15 @@ Utiliza las referencias de los breakpoints @media abajo */
   /*Sección Title*/
   .title__network__item a {
     font-size: 1.5rem;
+  }
+
+  /* Scroll icon */
+  .scroll-icon {
+    padding: 2rem 2.1rems;
+  }
+  .scroll-icon i {
+    font-size: 1.5rem;
+    padding: 0;
   }
 }
 
@@ -709,9 +736,10 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 @media screen and (max-width: 563px) {
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   /*Sección Menu*/
+
   .menu__list__item__contato {
     font-weight: 100;
     font-size: 1.4rem;
@@ -796,9 +824,10 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
   .menu {
     padding: 1.6rem;
+    gap: 0.2rem;
   }
   .menu__header {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
 

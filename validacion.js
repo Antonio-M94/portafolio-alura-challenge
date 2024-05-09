@@ -73,3 +73,20 @@ function validateEmail(email) {
 function clearWarningMessage() {
   warningMensaje.textContent = '';
 }
+
+// Botón flotante de scroll
+window.addEventListener('scroll', function () {
+  var scrollBtn = document.querySelector('.scroll-icon');
+  if (window.scrollY > 400) {
+    scrollBtn.style.opacity = '1';
+  } else {
+    scrollBtn.style.opacity = '0';
+  }
+});
+
+document.querySelector('.scroll-icon').addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
